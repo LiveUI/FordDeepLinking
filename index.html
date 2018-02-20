@@ -3,6 +3,8 @@
 		<title>Ford Deep Linking</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<style>
 		.btn {
@@ -12,34 +14,71 @@
 		.expand {
 			width: 40px !important;
 		}
+		.btn small {
+			display: block;
+			font-size: x-small;
+			color: #e4e4e4;
+		}
 		</style>
 	</head>
 	<body style="text-align: center;">
 		<h1><img src="./img/ford-logo.png" alt="" height="80" /></h1>
 		<div class="container">
 			<h4>Dealer</h4>
-			<p><a href="fordapp://dealer" class="btn btn-primary">fordapp://dealer</a></p>
+			<p><a href="fordapp://dealer" class="btn btn-primary">Dealer name <small>fordapp://dealer</small></a></p>
 			
 			<form action="fordapp://dealer" method="get" class="">
 				<p>
-					<div class="btn-group " role="group" aria-label="Button group with nested dropdown w-100">
-						<button type="submit" class="btn btn-primary">fordapp://dealer?zipcode=STRING</button>
+					<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+						<button type="submit" class="btn btn-primary">ZipCode <small>zipcode=STRING</small></button>
 						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-target="#collapseD2" aria-expanded="false" aria-controls="collapseD2"></button>
 					</div>
 					<div class="collapse" id="collapseD2">
-						<div class="card card-body">
-							<input name="zipcode" type="text" value="STRING" placeholder="ZipCode" />
-						</div>
+						<p><label>ZipCode:</label> <input name="zipcode" type="text" value="STRING" placeholder="ZipCode" class="form-control" /></p>
 					</div>
 				</p>
 			</form>
 			
-			<p>
-				<a href="fordapp://dealer?dealername=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING</a>
-			</p>
+			<form action="fordapp://dealer" method="get" class="">
+				<p>
+					<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+						<button type="submit" class="btn btn-primary">Name <small>dealername=STRING</small></button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-target="#collapseD3" aria-expanded="false" aria-controls="collapseD3"></button>
+					</div>
+					<div class="collapse" id="collapseD3">
+						<p><label>Name:</label> <input name="dealername" type="text" value="STRING" placeholder="Dealername" class="form-control" /></p>
+					</div>
+				</p>
+			</form>
 			
-			<a href="fordapp://dealer?dealername=STRING&town=STRING&county=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&town=STRING&county=STRING</a>
-			<a href="fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING</a>
+			<form action="fordapp://dealer" method="get" class="">
+				<p>
+					<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+						<button type="submit" class="btn btn-primary">Name, Town & County <small>dealername=STRING&town=STRING&county=STRING</small></button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-target="#collapseD4" aria-expanded="false" aria-controls="collapseD4"></button>
+					</div>
+					<div class="collapse" id="collapseD4">
+						<p><label>Name:</label> <input name="dealername" type="text" value="STRING" placeholder="Dealername" class="form-control" /></p>
+						<p><label>Town:</label> <input name="town" type="text" value="STRING" placeholder="Town" class="form-control" /></p>
+						<p><label>County:</label> <input name="county" type="text" value="STRING" placeholder="County" class="form-control" /></p>
+					</div>
+				</p>
+			</form>
+			
+			<form action="fordapp://dealer" method="get" class="">
+				<p>
+					<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+						<button type="submit" class="btn btn-primary">Name, Postcode & State <small>dealername=STRING&postcode=STRING&state=STRING</small></button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-target="#collapseD5" aria-expanded="false" aria-controls="collapseD5"></button>
+					</div>
+					<div class="collapse" id="collapseD5">
+						<p><label>Name:</label> <input name="dealername" type="text" value="STRING" placeholder="Dealername" class="form-control" /></p>
+						<p><label>Postcode:</label> <input name="postcode" type="text" value="STRING" placeholder="Postcode" class="form-control" /></p>
+						<p><label>State:</label> <input name="state" type="text" value="STRING" placeholder="State" class="form-control" /></p>
+					</div>
+				</p>
+			</form>
+			
 			<a href="fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx" class="btn btn-primary">fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx</a>
 			<a href="fordapp://dealer?dealername=STRING&postcode=STRING&sort=distance" class="btn btn-primary">fordapp://dealer?dealername=STRING&postcode=STRING&sort=distance</a>
 			
