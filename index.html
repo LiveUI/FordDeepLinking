@@ -2,8 +2,35 @@
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<style>
+		.btn {
+			width: 80%;
+			margin-bottom: 8px;
+		}
+		</style>
 	</head>
-	<body>
-		<h1>hu :)</h1>
+	<body style="text-align: center;">
+		<h1><img src="./img/ford-logo.png" alt="" height="80" /></h1>
+		<div>
+			<h4>Dealer</h4>
+			<a href="fordapp://dealer" class="btn btn-primary">fordapp://dealer</a>
+			<a href="fordapp://dealer?zipcode=STRING" class="btn btn-primary">fordapp://dealer?zipcode=STRING</a>
+			<a href="fordapp://dealer?dealername=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING</a>
+			<a href="fordapp://dealer?dealername=STRING&town=STRING&county=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&town=STRING&county=STRING</a>
+			<a href="fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING</a>
+			<a href="fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx" class="btn btn-primary">fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx</a>
+			<a href="fordapp://dealer?dealername=STRING&postcode=STRING&sort=distance" class="btn btn-primary">fordapp://dealer?dealername=STRING&postcode=STRING&sort=distance</a>
+			
+			<h4>Fuel</h4>
+			<a href="fordapp://fuel" class="btn btn-primary">fordapp://fuel</a>
+			<a href="fordapp://fuel?poilat=xx.xxxxx&poilong=x.xxxxxxx&poiname=xxxxxxx" class="btn btn-primary">fordapp://fuel?poilat=xx.xxxxx&poilong=x.xxxxxxx&poiname=xxxxxxx</a>
+			<a href="fordapp://fuel?brand=STRING&type=diesel&sort=distance" class="btn btn-primary">fordapp://fuel?brand=STRING&type=diesel&sort=distance</a>
+			<a href="fordapp://fuel?brand=STRING&sort=price" class="btn btn-primary">fordapp://fuel?brand=STRING&sort=price</a>
+			
+			<h4>Park</h4>
+			<a href="fordapp://park" class="btn btn-primary">fordapp://park</a>
+			<a href="fordapp://park?poilat=xx.xxxxx&poilong=x.xxxxxxx&poiname=xxxxxxx&date=yyyy-MM-dd'T'HH:mm:ss" class="btn btn-primary">fordapp://park?poilat=xx.xxxxx&poilong=x.xxxxxxx&poiname=xxxxxxx&date=yyyy-MM-dd'T'HH:mm:ss</a>
+			<a href="fordapp://park?poiname=STRING&sort=price" class="btn btn-primary">fordapp://park?poiname=STRING&sort=price</a>
+		</div>
 	</body>
 </html>
