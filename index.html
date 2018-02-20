@@ -1,21 +1,43 @@
 <html>
 	<head>
+		<title>Ford Deep Linking</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<style>
 		.btn {
-			width: 80%;
+			width: 90%;
 			margin-bottom: 8px;
+		}
+		.expand {
+			width: 40px !important;
 		}
 		</style>
 	</head>
 	<body style="text-align: center;">
 		<h1><img src="./img/ford-logo.png" alt="" height="80" /></h1>
-		<div>
+		<div class="container">
 			<h4>Dealer</h4>
-			<a href="fordapp://dealer" class="btn btn-primary">fordapp://dealer</a>
-			<a href="fordapp://dealer?zipcode=STRING" class="btn btn-primary">fordapp://dealer?zipcode=STRING</a>
-			<a href="fordapp://dealer?dealername=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING</a>
+			<p><a href="fordapp://dealer" class="btn btn-primary">fordapp://dealer</a></p>
+			
+			<form action="fordapp://dealer" method="get" class="">
+				<p>
+					<div class="btn-group " role="group" aria-label="Button group with nested dropdown w-100">
+						<button type="submit" class="btn btn-primary">fordapp://dealer?zipcode=STRING</button>
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-target="#collapseD2" aria-expanded="false" aria-controls="collapseD2"></button>
+					</div>
+					<div class="collapse" id="collapseD2">
+						<div class="card card-body">
+							<input name="zipcode" type="text" value="STRING" />
+						</div>
+					</div>
+				</p>
+			</form>
+			
+			<p>
+				<a href="fordapp://dealer?dealername=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING</a>
+			</p>
+			
 			<a href="fordapp://dealer?dealername=STRING&town=STRING&county=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&town=STRING&county=STRING</a>
 			<a href="fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING" class="btn btn-primary">fordapp://dealer?dealername=STRING&postcode=STRING&state=STRING</a>
 			<a href="fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx" class="btn btn-primary">fordapp://dealer?poilat=xx.xxxxx&poilong=x.xxxxxxx</a>
